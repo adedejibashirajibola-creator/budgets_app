@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Budget App</h1>
+        <p class="subtitle">Plan • Track • Save</p>
+
+        <div class="budget-app">
+            <section class="form-card">
+                <h2>Add Product</h2>
+                <p>Enter the details of your purchase</p>
+
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" placeholder="Enter your product name">
+
+                <label for="productPrice">Product Price</label>
+                <input type="number" id="productPrice" placeholder="Enter your price">
+
+                <label for="productQuantity">Product Quantity</label>
+                <input type="number" id="productQuantity" placeholder="Enter your quantity">
+
+                <label for="money">Money You Have</label>
+                <input type="number" id="money" placeholder="Enter the money you have">
+
+                <button type="button" onclick="displayText()">Buy</button>
+            </section>
+
+            <section class="result-card">
+                <h2>Your Shopping List</h2>
+                <p>Here's what you've added</p>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Items</th>
+                                <th>Price (₦)</th>
+                                <th>Quantity</th>
+                                <th>Total Price (₦)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="items"></td>
+                                <td id="price"></td>
+                                <td id="quantity"></td>
+                                <td id="totalPrice"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="money-summary">
+                    <h2>Money Summary</h2>
+                    <div class="summary-row">
+                        <span>Your Money:</span>
+                        <strong>₦<span id="yourMoney">0</span></strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total Spent:</span>
+                        <strong>₦<span id="spent">0</span></strong>
+                    </div>
+                    <hr>
+                    <div class="summary-row remaining">
+                        <span>Remaining Balance:</span>
+                        <strong>₦<span id="remaining">0</span></strong>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="message">
+            Manage your money wisely. Small steps towards a bigger future!
+        </div>
+
+        <div class="footer">
+            <span>Jybson</span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
